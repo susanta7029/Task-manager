@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "watch": "nodemon index.js"
+    "watch": "nodemon index.js",
+    "test": "echo \"No tests defined\" && exit 0"
   },
   "repository": {
     "type": "git",
