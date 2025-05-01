@@ -1,0 +1,29 @@
+
+services:
+  client:
+    build:
+      context: ./client
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+    ports:
+      - "3000:8000"
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

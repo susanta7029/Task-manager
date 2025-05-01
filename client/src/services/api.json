@@ -1,0 +1,15 @@
+{
+  "registerApi": "http://localhost:5000/api/user/register",
+  "loginApi": "http://localhost:5000/api/user/login",
+  "deleteAccApi": "http://localhost:5000/api/user/logout",
+  "addTaskApi": "http://localhost:5000/api/user/addTask",
+  "editTaskApi": "http://localhost:5000/api/user/editTask",
+  "deleteTaskApi": "http://localhost:5000/api/user/deleteTask",
+  "findTasks": "http://localhost:5000/api/user/getTasks",
+  "findPicture": "http://localhost:5000/api/user/getUserPicture",
+  "specificTask": "http://localhost:5000/api/user/getSpecificTask",
+  "changePass": "http://localhost:5000/api/user/changePass",
+  "changeUser": "http://localhost:5000/api/user/changeUsername",
+  "changeProfile": "http://localhost:5000/api/user/changeProfile",
+  "getUserInfo": "http://localhost:5000/api/user/userInfo"
+}

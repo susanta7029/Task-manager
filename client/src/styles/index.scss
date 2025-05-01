@@ -1,0 +1,210 @@
+@use "./utils.scss" as *;
+@import "./sidebar.scss";
+@import "./main.scss";
+@import "./header.scss";
+@import "./account.scss";
+@import  "./admin.scss";
+@import "./dashboard.scss";
+@import "./login.scss";
+@import "./register.scss";
+@import "./task.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+#root{
+    background-color: $backColor;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: relative;
+    &::-webkit-scrollbar{
+        width: 10px;
+    }&::-webkit-scrollbar-button{
+        width: 0;
+        height: 0;
+    }&::-webkit-scrollbar-thumb{
+        width: 100%;
+        #{$bc}: #9e9e9e;
+    }
+}
+
+.layout{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    @include Flex(center,flex-start);
+}
+
+.footer{
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    @include Flex(center , center);
+    border-top: dotted 4px $fontColor;
+    margin-top: 30px;
+    .footer-p{
+        color: $fontColor;
+        text-align: center;
+        .who{
+            padding: 0 5px 0 5px;
+            #{$bc}: rgba(0, 0, 0, 0.918);
+            cursor: pointer;
+            color: black;
+            &:hover{
+                color: $fontColor;
+                #{$bc}: rgba(0, 0, 0, 0);
+            }
+            @media (max-width: 595px){
+                display: block;
+                margin: 5px;
+            }
+        }
+        @media (min-width: 1600px){
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.change-password , .change-profile , .change-username{
+    width: 70%;
+    min-height: 100vh;
+    height: auto;
+    @include Flex(center , center);
+    flex-direction: column;
+
+    @media (max-width : 980px) {
+        width: 100%;
+    }
+}
+
+.change-password{
+    &-h1{
+        margin-bottom: 20px;
+        color: $fontColor;
+    }
+    &-form{
+        @include Flex(center , center);
+        flex-direction: column;
+        #{$bc}: #C2C2C2;
+        padding: 15px;
+        border-radius: 8px;
+        width: 80%;
+        div{
+            margin: 10px;
+        }
+        button{
+            margin: 15px;
+        }
+    }
+}
+
+.change-username{
+    &-h1{
+        margin-bottom: 20px;
+        color: $fontColor;
+    }
+    &-form{
+        @include Flex(center , center);
+        flex-direction: column;
+        #{$bc}: #C2C2C2;
+        padding: 15px;
+        border-radius: 8px;
+        width: 80%;
+        div{
+            margin: 10px;
+        }
+        button{
+            margin: 15px;
+        }
+    }
+}
+
+.change-profile{
+    &-h1{
+        margin-bottom: 20px;
+        color: $fontColor;
+    }
+    &-form{
+        @include Flex(center , center);
+        flex-direction: column;
+        #{$bc}: #C2C2C2;
+        padding: 15px;
+        border-radius: 8px;
+        width: 80%;
+        div{
+            margin: 10px;
+        }
+        button{
+            margin: 15px;
+        }
+    }
+}
+
+.back-link{
+    position: relative;
+    margin: 30px;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $fontColor;
+    padding: 0;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        width: 100%;
+        #{$bc}: $otherColor;
+        z-index: 8;
+        transition: all 0.3s ease-out;
+    }
+    &:hover::before{
+        #{$bc}: #3c415c52;
+        height: 25px;
+    }
+
+}
+
+@keyframes load{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+   30%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
