@@ -5,7 +5,7 @@ services:
     environment:
       - NODE_OPTIONS=--openssl-legacy-provider
     ports:
-      - "3000:8000"
+      - "3000:3000"
     depends_on:
       - server
 
