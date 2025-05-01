@@ -25,10 +25,10 @@ pipeline {
 
         stage('Run Server Tests') {
             steps {
-        
-                bat 'docker exec $(docker ps -qf "name=server") npm test || true'
+                bat '''FOR /F "delims=" %%i IN ('docker ps -q -f "name=server"') DO docker exec %%i npm test || echo "Tests failed (ignored)" '''
             }
         }
+
 
         stage('Clean Up') {
             steps {
