@@ -12,27 +12,27 @@ pipeline {
         stage('Build Docker Images') {
             steps {
               
-                sh 'docker compose build'
+                bat 'docker compose build'
             }
         }
 
         stage('Start Containers') {
             steps {
            
-                sh 'docker compose up -d'
+                bat 'docker compose up -d'
             }
         }
 
         stage('Run Server Tests') {
             steps {
         
-                sh 'docker exec $(docker ps -qf "name=server") npm test || true'
+                bat 'docker exec $(docker ps -qf "name=server") npm test || true'
             }
         }
 
         stage('Clean Up') {
             steps {
-                sh 'docker system prune -f'
+                bat 'docker system prune -f'
             }
         }
     }
